@@ -1,6 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from "typeorm";
 
-
 import Image from './Images';
 
 @Entity('orphanages')
@@ -33,5 +32,5 @@ export default class Opharnage{
         cascade: ['insert', 'update']
     })
     @JoinColumn({name: 'orphanage_id'})
-    images: Image[];
+    images: Image[]
 }
